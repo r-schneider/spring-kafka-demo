@@ -1,2 +1,2 @@
 # spring-kafka-demo
-Kafka producer and consumer example
+Messaging service utilizing spring boot and kafka
