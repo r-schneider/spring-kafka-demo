@@ -10,8 +10,9 @@ public class Book {
     private String title;
     private String author;
     private String description;
-    private int year;
-    private int isbn;
-    private int price;
+    private String publisher;
+    private String year;
+    private long isbn;
+    private float price;
 
 }
