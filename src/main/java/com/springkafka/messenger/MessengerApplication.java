@@ -1,4 +1,4 @@
-package com.springkafka.api.messenger;
+package com.springkafka.messenger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,7 @@ public class MessengerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MessengerApplication.class, args);
+		System.out.println("HELLO WORLD");
 	}
 
 }
