@@ -1,15 +1,21 @@
 package com.springkafka.messenger.application.controller;
 
-import com.springkafka.messenger.application.service.BookServiceImpl;
+import com.springkafka.messenger.application.service.BookService;
+import com.springkafka.messenger.domain.model.Book;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-public class BookControllerImpl {
+@RestController
+public class BookControllerImpl implements BookController {
 
-    BookServiceImpl service;
+    BookService service;
 
-    public BookControllerImpl(BookServiceImpl service) {
+    public BookControllerImpl(BookService service) {
         this.service = service;
+    }
+
+    @Override
+    public Book getBookDetails(long isbn) {
+        return service.findBookByIsbn(isbn);
     }
 }
